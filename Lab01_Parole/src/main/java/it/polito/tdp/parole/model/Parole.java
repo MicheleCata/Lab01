@@ -27,13 +27,24 @@ public class Parole {
 	}
 	
 	public List<String> getElenco() {
-		List <String> pp = new LinkedList<>(parole);
-		Collections.sort(pp, new  ComparatoreParole());
-		return pp;
+		
+		Collections.sort(parole, new  ComparatoreParole());
+		return parole;
 	}
 	
 	public void reset() {
 		parole.clear();
 	}
+
+	public String toString() {
+		String stampa ="";
+		for (String s: parole) {
+			stampa+= s+"\n";
+		}
+		return stampa;
+		
+	}
+	
+	
 
 }
