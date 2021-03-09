@@ -1,8 +1,6 @@
 package it.polito.tdp.parole.model;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.List;
 
 public class Parole {
@@ -10,7 +8,7 @@ public class Parole {
 	List <String> parole;
 		
 	public Parole() {
-		parole = new LinkedList<>();
+		parole = new LinkedList<>(); // oppure con ArrayList<>()
 	}
 	
 	public void addParola(String p) {
@@ -43,6 +41,10 @@ public class Parole {
 		}
 		return stampa;
 		
+	}
+	
+	public void cancellaParola(String p) {
+		parole.remove(p);
 	}
 	
 	
